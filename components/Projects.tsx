@@ -226,7 +226,16 @@ const Projects: React.FC = () => {
                     {selectedProject.designDrafts && selectedProject.designDrafts.length > 0 && (
                       <div className="mt-24 pt-12 border-t border-white/10">
                         <div className="mb-8">
-                          <h3 className="text-xs font-mono uppercase tracking-widest text-gray-500">{t.projects.modal_labels.drafts}</h3>
+                          <h3
+                            onClick={() => {
+                              if (selectedProject.designDraftLink) {
+                                window.open(selectedProject.designDraftLink, '_blank');
+                              }
+                            }}
+                            className={`text-xs font-mono uppercase tracking-widest text-gray-500 transition-colors ${selectedProject.designDraftLink ? 'cursor-pointer hover:text-brand-green hover:underline' : ''}`}
+                          >
+                            {t.projects.modal_labels.drafts} {selectedProject.designDraftLink && '↗'}
+                          </h3>
                         </div>
 
                         <div
