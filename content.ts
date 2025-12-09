@@ -15,7 +15,7 @@ const getDrafts = (glob: Record<string, { default: string }>) => {
 // eager: true ensures they are bundled immediately rather than lazy loaded
 const classinDrafts = getDrafts(import.meta.glob('./assets/classin-x/*.{png,jpg,jpeg,svg}', { eager: true }));
 const longzhuDrafts = getDrafts(import.meta.glob('./assets/longzhu/*.{png,jpg,jpeg,svg}', { eager: true }));
-const datavizDrafts = getDrafts(import.meta.glob('./assets/data-vis/*.{png,jpg,jpeg,svg}', { eager: true }));
+const datavizDrafts = getDrafts(import.meta.glob('./assets/data-viz/*.{png,jpg,jpeg,svg}', { eager: true }));
 
 export const content = {
   en: {
