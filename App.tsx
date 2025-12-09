@@ -8,23 +8,26 @@ import Contact from './components/Contact';
 import CustomCursor from './components/CustomCursor';
 import FloatingLetters from './components/FloatingLetters';
 import { LanguageProvider } from './LanguageContext';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="bg-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-black">
-        <CustomCursor />
-        <FloatingLetters />
-        <Navbar />
-        <main>
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-        </main>
-        <Contact />
-      </div>
-    </LanguageProvider>
+    <ErrorBoundary>
+      <LanguageProvider>
+        <div className="bg-black min-h-screen text-slate-200 selection:bg-brand-green selection:text-black">
+          <CustomCursor />
+          <FloatingLetters />
+          <Navbar />
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+          </main>
+          <Contact />
+        </div>
+      </LanguageProvider>
+    </ErrorBoundary>
   );
 }
 
