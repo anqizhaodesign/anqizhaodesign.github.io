@@ -1,5 +1,6 @@
 import { Project, Experience } from './types';
 import portraitImg from './assets/portrait.jpg';
+import classinHeroImg from './assets/classin-hero.png';
 
 export const content = {
   en: {
@@ -147,7 +148,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: 'ClassIn X Smart Classroom',
       category: 'EdTech / Hardware & Software',
       role: 'Lead Interaction Designer',
-      image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2121&auto=format&fit=crop',
+      image: classinHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop',
@@ -243,7 +244,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: 'ClassIn X 智慧教室',
       category: '教育科技 / 软硬件结合',
       role: '交互设计负责人',
-      image: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=2121&auto=format&fit=crop',
+      image: classinHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop',
