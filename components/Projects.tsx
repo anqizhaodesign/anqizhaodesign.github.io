@@ -243,7 +243,12 @@ const Projects: React.FC = () => {
                               animate={{ opacity: 1, x: 0 }}
                               exit={{ opacity: 0, x: -50 }}
                               transition={{ duration: 0.3 }}
-                              className="w-full h-full object-cover cursor-grab active:cursor-grabbing"
+                              onClick={() => {
+                                if (selectedProject.designDraftLink) {
+                                  window.open(selectedProject.designDraftLink, '_blank');
+                                }
+                              }}
+                              className={`w-full h-full object-contain ${selectedProject.designDraftLink ? 'cursor-pointer' : 'cursor-grab active:cursor-grabbing'}`}
                               drag="x"
                               dragConstraints={{ left: 0, right: 0 }}
                               dragElastic={0.2}

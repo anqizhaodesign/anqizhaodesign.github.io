@@ -5,6 +5,7 @@ export interface Project {
   role: string;
   image: string;
   designDrafts?: string[];
+  designDraftLink?: string;
   summary: string;
   star: {
     situation: string;
