@@ -169,7 +169,7 @@ const Projects: React.FC = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       src={selectedProject.image}
                       alt="Hero"
-                      className="w-full h-[500px] object-cover rounded-lg mb-16 shadow-2xl"
+                      className="w-full h-auto aspect-video md:h-[500px] object-cover rounded-lg mb-16 shadow-2xl"
                     />
 
                     {/* STAR Method - Action & Result */}
