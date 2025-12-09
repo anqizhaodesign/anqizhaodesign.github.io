@@ -4,6 +4,19 @@ import classinHeroImg from './assets/classin-hero.png';
 import longzhuHeroImg from './assets/longzhu-hero.png';
 import datavizHeroImg from './assets/dataviz-hero.jpeg';
 
+// Helper to load and sort images dynamically
+const getDrafts = (glob: Record<string, { default: string }>) => {
+  return Object.keys(glob)
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' }))
+    .map(key => glob[key].default);
+};
+
+// Dynamic imports using Vite's glob feature
+// eager: true ensures they are bundled immediately rather than lazy loaded
+const classinDrafts = getDrafts(import.meta.glob('./assets/classin-x/*.{png,jpg,jpeg,svg}', { eager: true }));
+const longzhuDrafts = getDrafts(import.meta.glob('./assets/longzhu/*.{png,jpg,jpeg,svg}', { eager: true }));
+const datavizDrafts = getDrafts(import.meta.glob('./assets/data-vis/*.{png,jpg,jpeg,svg}', { eager: true }));
+
 export const content = {
   en: {
     nav: {
@@ -151,13 +164,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: 'EdTech / Hardware & Software',
       role: 'Lead Interaction Designer',
       image: classinHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=2874&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: classinDrafts,
       summary: 'A comprehensive smart screen solution bridging the gap between online and offline education (OMO).',
       color: 'from-emerald-500 to-teal-900',
       tags: ['Smart Hardware', 'Launcher Design', 'Interaction Design'],
@@ -183,13 +190,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: 'Digital Transformation / B2C',
       role: 'Product Manager & Interaction Designer',
       image: longzhuHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: longzhuDrafts,
       summary: 'A unified membership and loyalty system for Longfor Group, connecting Real Estate, Malls, and Rental businesses.',
       color: 'from-orange-500 to-red-900',
       tags: ['Membership System', 'Cross-platform', 'Strategy'],
@@ -214,13 +215,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: 'B-End / Data Visualization',
       role: 'Interaction Designer',
       image: datavizHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2952&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2806&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: datavizDrafts,
       summary: 'High-level decision-making dashboard for Real Estate executives, transforming complex data into actionable insights.',
       color: 'from-blue-600 to-indigo-900',
       tags: ['Data Viz', 'B-End', 'Dashboard'],
@@ -247,13 +242,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: '教育科技 / 软硬件结合',
       role: '交互设计负责人',
       image: classinHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1509021436665-8f07dbf5bf1d?q=80&w=2874&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: classinDrafts,
       summary: '连接线上线下教育(OMO)的综合智慧大屏解决方案。',
       color: 'from-emerald-500 to-teal-900',
       tags: ['智能硬件', '启动器设计', '交互设计'],
@@ -279,13 +268,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: '数字化转型 / B2C',
       role: '产品经理 & 交互设计',
       image: longzhuHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: longzhuDrafts,
       summary: '龙湖集团统一会员及忠诚度系统，连接地产、商场和租赁业务。',
       color: 'from-orange-500 to-red-900',
       tags: ['会员体系', '跨平台体验', '产品策略'],
@@ -310,13 +293,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       category: 'B端 / 数据可视化',
       role: '交互设计师',
       image: datavizHeroImg,
-      designDrafts: [
-        'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2952&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2806&auto=format&fit=crop',
-        'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2940&auto=format&fit=crop'
-      ],
+      designDrafts: datavizDrafts,
       summary: '面向地产高管的决策大屏，将复杂数据转化为可执行的洞察。',
       color: 'from-blue-600 to-indigo-900',
       tags: ['数据可视化', 'B端设计', '大屏设计'],
