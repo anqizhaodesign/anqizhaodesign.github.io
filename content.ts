@@ -65,8 +65,8 @@ export const content = {
       email: "zhaoanqi.dl@163.com",
       phone: "+86 151 8402 7334",
       socials: [
-        { name: 'XiaoHongShu', url: '#' },
-        { name: 'Douyin', url: '#' }
+        { name: 'XiaoHongShu', url: 'https://xhslink.com/m/stajSYRdBw' },
+        { name: 'Douyin', url: 'https://v.douyin.com/bLzW8gJ8blk/' }
       ]
     }
   },
@@ -133,8 +133,8 @@ export const content = {
       email: "zhaoanqi.dl@163.com",
       phone: "+86 151 8402 7334",
       socials: [
-        { name: '小红书', url: '#' },
-        { name: '抖音', url: '#' }
+        { name: '小红书', url: 'https://xhslink.com/m/stajSYRdBw' },
+        { name: '抖音', url: 'https://v.douyin.com/bLzW8gJ8blk/' }
       ]
     }
   }
