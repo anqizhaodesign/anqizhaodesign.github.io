@@ -1,4 +1,5 @@
 import { Project, Experience } from './types';
+import portraitImg from './assets/portrait.jpg';
 
 export const content = {
   en: {
@@ -26,9 +27,9 @@ export const content = {
       p1_end: "dedicated to creating comfortable interaction experiences and finding better problem-solving methods for enterprises.",
       p2_start: "6+ years of interaction design experience, familiar with multi-platform design processes. Skilled in producing high-fidelity prototypes for business interviews and testing. I comprehensively consider technical and commercial factors to drive product implementation and build detailed product solutions from 0 to 1.",
       tags: [
-        "Good at communication", "Strong logical analysis", "Self-driven", 
-        "Finance knowledge", "Digital product thinking", 
-        "Multi-business experience", "AI product experience", 
+        "Good at communication", "Strong logical analysis", "Self-driven",
+        "Finance knowledge", "Digital product thinking",
+        "Multi-business experience", "AI product experience",
         "Quick learner"
       ],
       cards: {
@@ -38,7 +39,7 @@ export const content = {
         focus: { title: 'Focus', desc: 'Finance, Strategy, AI, HCI' },
       },
       badge: '6+ Years\nExperience',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop'
+      image: portraitImg
     },
     projects: {
       title_prefix: 'Selected',
@@ -94,9 +95,9 @@ export const content = {
       p1_end: "，致力于打造舒适的交互体验，为企业寻找更好的解决问题的方法。",
       p2_start: "拥有6年+交互设计经验，熟悉多端设计流程方法；善于产出高保真原型对业务进行访谈与测试；并综合考虑技术、商业等因素，组织沟通评审，推动产品落地，从O到1搭建细化产品方案。",
       tags: [
-        "善于沟通", "逻辑分析能力强", "自驱力强", 
-        "具备金融类相关知识", "数字化产品思维", 
-        "多业务经验", "做过AI产品", 
+        "善于沟通", "逻辑分析能力强", "自驱力强",
+        "具备金融类相关知识", "数字化产品思维",
+        "多业务经验", "做过AI产品",
         "能够快速学习领域知识"
       ],
       cards: {
@@ -106,7 +107,7 @@ export const content = {
         focus: { title: '关注领域', desc: '金融投资、数字战略、AI、人机交互' },
       },
       badge: '6年+\n从业经验',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=2864&auto=format&fit=crop'
+      image: portraitImg
     },
     projects: {
       title_prefix: '精选',
@@ -116,7 +117,7 @@ export const content = {
         situation: '背景 (Situation)',
         task: '任务 (Task)',
         action: '行动 (Action)',
-        result: '结果 (Result)',
+        result: 'Result',
         drafts: '设计稿与过程 (Design Drafts)'
       }
     },
@@ -183,8 +184,8 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
         'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop',
-         'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
-         'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
+        'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
       ],
       summary: 'A unified membership and loyalty system for Longfor Group, connecting Real Estate, Malls, and Rental businesses.',
       color: 'from-orange-500 to-red-900',
@@ -279,8 +280,8 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
         'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=2940&auto=format&fit=crop',
-         'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
-         'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
+        'https://images.unsplash.com/photo-1556742102-fab9f20b3b68?q=80&w=2940&auto=format&fit=crop',
+        'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2940&auto=format&fit=crop'
       ],
       summary: '龙湖集团统一会员及忠诚度系统，连接地产、商场和租赁业务。',
       color: 'from-orange-500 to-red-900',
