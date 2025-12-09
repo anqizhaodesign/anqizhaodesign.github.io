@@ -83,10 +83,10 @@ const Projects: React.FC = () => {
                     animate={{ opacity: 1, scale: 1, x: 0, rotate: 0 }}
                     exit={{ opacity: 0, scale: 0.9, x: -30, rotate: 2 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="fixed pointer-events-none z-20 hidden lg:block w-[600px] h-[450px] shadow-2xl"
+                    className="fixed pointer-events-none z-20 hidden lg:block w-[600px] h-[450px] shadow-2xl bg-black/50 rounded-2xl overflow-hidden"
                     style={{ top: '20%', right: '15%' }}
                   >
-                    <img src={project.image} alt={project.title} className="w-full h-full object-cover rounded-2xl" />
+                    <img src={project.image} alt={project.title} className="w-full h-full object-contain" />
                   </motion.div>
                 )}
               </AnimatePresence>
