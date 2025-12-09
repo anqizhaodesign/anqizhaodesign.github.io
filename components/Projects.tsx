@@ -210,22 +210,8 @@ const Projects: React.FC = () => {
                     {/* Design Drafts Carousel */}
                     {selectedProject.designDrafts && selectedProject.designDrafts.length > 0 && (
                       <div className="mt-24 pt-12 border-t border-white/10">
-                        <div className="flex justify-between items-center mb-8">
+                        <div className="mb-8">
                           <h3 className="text-xs font-mono uppercase tracking-widest text-gray-500">{t.projects.modal_labels.drafts}</h3>
-                          <div className="flex gap-4">
-                            <button
-                              onClick={prevDraft}
-                              className="p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all"
-                            >
-                              <ChevronLeft size={20} />
-                            </button>
-                            <button
-                              onClick={nextDraft}
-                              className="p-3 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all"
-                            >
-                              <ChevronRight size={20} />
-                            </button>
-                          </div>
                         </div>
 
                         <div className="relative overflow-hidden rounded-xl bg-white/5 aspect-[16/9]">
@@ -274,11 +260,11 @@ const Projects: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </div>
+            </motion.div >
+          </div >
         )}
-      </AnimatePresence>
-    </section>
+      </AnimatePresence >
+    </section >
   );
 };
 
