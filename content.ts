@@ -1,6 +1,8 @@
 import { Project, Experience } from './types';
 import portraitImg from './assets/portrait.jpg';
 import classinHeroImg from './assets/classin-hero.png';
+import longzhuHeroImg from './assets/longzhu-hero.png';
+import datavizHeroImg from './assets/dataviz-hero.jpeg';
 
 export const content = {
   en: {
@@ -180,7 +182,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: 'Longfor "Longzhu" Membership',
       category: 'Digital Transformation / B2C',
       role: 'Product Manager & Interaction Designer',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2940&auto=format&fit=crop',
+      image: longzhuHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
@@ -211,7 +213,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: 'Strategic Data Dashboard',
       category: 'B-End / Data Visualization',
       role: 'Interaction Designer',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
+      image: datavizHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2952&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
@@ -276,7 +278,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: '龙湖“珑珠”会员体系',
       category: '数字化转型 / B2C',
       role: '产品经理 & 交互设计',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=2940&auto=format&fit=crop',
+      image: longzhuHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=2940&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1620325867502-221cfb5faa5f?q=80&w=2957&auto=format&fit=crop',
@@ -307,7 +309,7 @@ export const projectsData: Record<'en' | 'zh', Project[]> = {
       title: '战略决策智慧大屏',
       category: 'B端 / 数据可视化',
       role: '交互设计师',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
+      image: datavizHeroImg,
       designDrafts: [
         'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=2952&auto=format&fit=crop',
         'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop',
