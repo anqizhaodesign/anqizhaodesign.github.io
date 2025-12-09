@@ -11,10 +11,25 @@ const Projects: React.FC = () => {
 
   const selectedProject = selectedProjectId ? projects.find(p => p.id === selectedProjectId) : null;
 
+  /* New State for Auto-play */
+  const [isAutoPlaying, setIsAutoPlaying] = useState(false);
+
   // Reset carousel when project changes
   useEffect(() => {
     setCurrentDraftIndex(0);
+    setIsAutoPlaying(false);
   }, [selectedProjectId]);
+
+  // Auto-play Effect
+  useEffect(() => {
+    let interval: ReturnType<typeof setInterval>;
+    if (isAutoPlaying && selectedProject?.designDrafts) {
+      interval = setInterval(() => {
+        setCurrentDraftIndex((prev) => (prev + 1) % selectedProject.designDrafts!.length);
+      }, 2000); // Change slide every 2 seconds
+    }
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, selectedProject]);
 
   const nextDraft = () => {
     if (selectedProject?.designDrafts) {
@@ -214,7 +229,11 @@ const Projects: React.FC = () => {
                           <h3 className="text-xs font-mono uppercase tracking-widest text-gray-500">{t.projects.modal_labels.drafts}</h3>
                         </div>
 
-                        <div className="relative overflow-hidden rounded-xl bg-white/5 aspect-[16/9]">
+                        <div
+                          className="relative overflow-hidden rounded-xl bg-white/5 aspect-[16/9]"
+                          onMouseEnter={() => setIsAutoPlaying(true)}
+                          onMouseLeave={() => setIsAutoPlaying(false)}
+                        >
                           <AnimatePresence mode="wait">
                             <motion.img
                               key={currentDraftIndex}
