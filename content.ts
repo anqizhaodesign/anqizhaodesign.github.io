@@ -1,5 +1,5 @@
 import { Project, Experience } from './types';
-import portraitImg from './assets/portrait.jpg';
+import portraitImg from './assets/portrait.png';
 import classinHeroImg from './assets/classin-hero.png';
 import longzhuHeroImg from './assets/longzhu-hero.png';
 import datavizHeroImg from './assets/dataviz-hero.jpeg';
