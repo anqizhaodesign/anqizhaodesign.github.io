@@ -98,10 +98,10 @@ const Projects: React.FC = () => {
                     animate={{ opacity: 1, scale: 1, x: 0, rotate: 0 }}
                     exit={{ opacity: 0, scale: 0.9, x: -30, rotate: 2 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="fixed pointer-events-none z-20 hidden lg:block w-[600px] h-[450px] shadow-2xl bg-black/50 rounded-2xl overflow-hidden"
+                    className="fixed pointer-events-none z-20 hidden lg:flex items-center justify-center w-[600px] h-[450px] shadow-2xl bg-black/50 rounded-2xl overflow-hidden"
                     style={{ top: '20%', right: '15%' }}
                   >
-                    <img src={project.image} alt={project.title} className="w-full h-full object-contain" />
+                    <img src={project.image} alt={project.title} className="w-auto h-auto max-w-full max-h-full object-contain rounded-2xl" />
                   </motion.div>
                 )}
               </AnimatePresence>
