@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
-import collectionPdf from '../assets/COLLECTION.pdf';
+
 
 const Projects: React.FC = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
         <div className="flex justify-between items-end border-b border-white/20 pb-8 mb-12">
           <h2 className="text-sm font-mono uppercase tracking-widest text-brand-green">03 / {t.nav.project}</h2>
           <a
-            href={collectionPdf}
+            href="https://pan.quark.cn/s/2b36403741f2"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-mono uppercase tracking-widest text-white hover:text-brand-green hover:underline transition-colors duration-300"
