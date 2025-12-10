@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ArrowRight, ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
+import collectionPdf from '../assets/COLLECTION.pdf';
 
 const Projects: React.FC = () => {
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const [currentDraftIndex, setCurrentDraftIndex] = useState(0);
-  const { t, projects } = useLanguage();
+  const { t, projects, language } = useLanguage();
 
   const selectedProject = selectedProjectId ? projects.find(p => p.id === selectedProjectId) : null;
 
@@ -49,7 +50,14 @@ const Projects: React.FC = () => {
 
         <div className="flex justify-between items-end border-b border-white/20 pb-8 mb-12">
           <h2 className="text-sm font-mono uppercase tracking-widest text-brand-green">03 / {t.nav.project}</h2>
-          <span className="text-xs font-mono text-gray-500 hidden md:block">{projects.length} PROJECTS</span>
+          <a
+            href={collectionPdf}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xl md:text-2xl font-display text-white hover:text-brand-green hover:underline transition-colors duration-300"
+          >
+            {language === 'zh' ? '合集 ↗' : 'COLLECTION ↗'}
+          </a>
         </div>
 
         <div className="flex flex-col">
