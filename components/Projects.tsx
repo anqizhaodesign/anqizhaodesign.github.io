@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
             rel="noopener noreferrer"
             className="text-xl md:text-2xl font-display text-white hover:text-brand-green hover:underline transition-colors duration-300"
           >
-            {language === 'zh' ? '合集 ↗' : 'COLLECTION ↗'}
+            {language === 'zh' ? <>合集 <span className="font-mono">↗</span></> : <>COLLECTION <span className="font-mono">↗</span></>}
           </a>
         </div>
 
