@@ -33,8 +33,13 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Create .nojekyll
-        run: touch ./dist/.nojekyll
+      - name: Create .nojekyll and 404.html
+        run: |
+          touch ./dist/.nojekyll
+          cp ./dist/index.html ./dist/404.html
+
+      - name: Debug - List dist contents
+        run: ls -R ./dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
