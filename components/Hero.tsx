@@ -63,14 +63,14 @@ const Hero: React.FC = () => {
         </div>
 
         {/* Floating Image/Element */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] md:w-[400px] md:h-[550px] bg-zinc-900 z-[-1] overflow-hidden opacity-40 md:opacity-100 mix-blend-screen grayscale"
         >
           <img src={t.hero.image} className="w-full h-full object-cover opacity-50" alt="Abstract" />
-        </motion.div>
+        </motion.div> */}
 
         {/* Bottom Info */}
         <div className="flex justify-between items-end border-b border-white/20 pb-6 mt-24 md:mt-32">
