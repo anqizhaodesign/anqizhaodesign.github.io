@@ -61,9 +61,9 @@ const About: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-32 w-full md:w-2/3 mx-auto h-[400px] md:h-[600px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
+        {/* <div className="mt-32 w-full md:w-2/3 mx-auto h-[400px] md:h-[600px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
           <img src={t.about.image} alt="Portrait" className="w-full h-full object-cover object-center" />
-        </div>
+        </div> */}
 
       </div>
     </section>
